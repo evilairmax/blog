@@ -6,7 +6,12 @@ module Api
       # GET: /articles
       def index
         @articles = Article.all
-        render json: @articles
+
+        if (@articles.length > 0)
+          render json: @articles
+        else
+          render json: "ERROR"
+        end
       end
 
       # GET: /articles/:id
@@ -33,7 +38,7 @@ module Api
       end
 
       def article_params
-        params.permit(:title, :content)
+        params.permit(:title, :content, :hidden)
       end
 
       def set_article
