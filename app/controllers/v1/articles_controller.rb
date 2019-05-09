@@ -15,20 +15,17 @@ module V1
 
     # POST: /articles
     def create
-      @article = Article.create!(article_params)
-      render json: @article
+      render json: 501
     end
 
     # PUT: /articles/:id
     def update
-      @article.update(article_params)
-      render json: @article
+      render json: 501
     end
 
     # DELETE: /articles/:id
     def destroy
-      @article.destroy
-      render json: "deleted!"
+      render json: 501
     end
 
     def article_params
