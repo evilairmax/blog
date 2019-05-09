@@ -15,17 +15,17 @@ module V1
 
     # POST: /articles
     def create
-      render json: 501
+      render json: {status: 'error', code: 501, message: 'Not implemented.'}
     end
 
     # PUT: /articles/:id
     def update
-      render json: 501
+      render json: {status: 'error', code: 501, message: 'Not implemented.'}
     end
 
     # DELETE: /articles/:id
     def destroy
-      render json: 501
+      render json: {status: 'error', code: 501, message: 'Not implemented.'}
     end
 
     def article_params
