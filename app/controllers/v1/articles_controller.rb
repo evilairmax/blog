@@ -5,12 +5,7 @@ module V1
     # GET: /articles
     def index
       @articles = Article.all
-
-      if (@articles.length > 0)
-        render json: @articles
-      else
-        render json: "ERROR"
-      end
+      render json: @articles
     end
 
     # GET: /articles/:id
