@@ -15,17 +15,17 @@ module V1
 
     # POST: /articles
     def create
-      render json: {status: 'error', code: 501, message: 'Not implemented.'}
+      render json: {status: 'error', code: 403, message: 'Permission denied'}
     end
 
     # PUT: /articles/:id
     def update
-      render json: {status: 'error', code: 501, message: 'Not implemented.'}
+      render json: {status: 'error', code: 403, message: 'Permission denied'}
     end
 
     # DELETE: /articles/:id
     def destroy
-      render json: {status: 'error', code: 501, message: 'Not implemented.'}
+      render json: {status: 'error', code: 403, message: 'Permission denied'}
     end
 
     def article_params
