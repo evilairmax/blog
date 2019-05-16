@@ -38,7 +38,7 @@ module Blog
     # Allow origin: http(s)://rodolfothiede.me
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'rodolfothiede.me'
+        origins '*'
         resource '*', headers: :any, methods: %i[get]
       end
     end
