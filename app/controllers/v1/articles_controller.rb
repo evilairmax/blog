@@ -4,7 +4,7 @@ module V1
 
     # GET: /articles
     def index
-      @articles = Article.all
+      @articles = Article.where(hidden: false)
       render json: @articles
     end
 
